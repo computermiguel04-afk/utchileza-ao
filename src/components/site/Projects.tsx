@@ -1,17 +1,17 @@
-import road from "@/assets/road-works.jpg";
-import machinery from "@/assets/heavy-machinery.jpg";
-import worker from "@/assets/team-worker.jpg";
-import board from "@/assets/project-board.jpg";
-import meeting from "@/assets/site-meeting.jpg";
-import roadTeam from "@/assets/road-team.jpg";
+import mixer from "@/assets/proj-concrete-mixer.jpg";
+import pool from "@/assets/proj-pool-villa.jpg";
+import team from "@/assets/proj-team-uniform.jpg";
+import meeting from "@/assets/proj-site-meeting-market.jpg";
+import clipboard from "@/assets/proj-clipboard-review.jpg";
+import director from "@/assets/proj-director-visit.jpg";
 
 const projects = [
-  { img: road, tag: "Obras Públicas", title: "Pavimentação urbana", loc: "Luanda" },
-  { img: machinery, tag: "Infraestrutura", title: "Movimentação de terras", loc: "Luanda" },
-  { img: worker, tag: "Fiscalização", title: "Acompanhamento técnico", loc: "Bengo" },
-  { img: meeting, tag: "Consultoria", title: "Visita de obra", loc: "Luanda" },
-  { img: board, tag: "Gestão", title: "Implantação de obra", loc: "Bengo" },
-  { img: roadTeam, tag: "Equipa", title: "Operação de campo", loc: "Luanda" },
+  { img: mixer, tag: "Infraestrutura", title: "Betonagem & drenagem", loc: "Luanda" },
+  { img: pool, tag: "Construção Civil", title: "Reabilitação de moradia", loc: "Luanda" },
+  { img: team, tag: "Equipa Técnica", title: "Engenharia & fiscalização", loc: "Luanda" },
+  { img: meeting, tag: "Consultoria", title: "Coordenação em obra", loc: "Bengo" },
+  { img: clipboard, tag: "Fiscalização", title: "Controlo de qualidade", loc: "Luanda" },
+  { img: director, tag: "Direcção", title: "Visita institucional", loc: "Luanda" },
 ];
 
 export const Projects = () => {
