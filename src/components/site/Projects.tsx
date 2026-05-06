@@ -42,6 +42,7 @@ export const Projects = () => {
                 alt={p.title}
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
+                style={{ filter: "contrast(1.08) saturate(1.12) brightness(1.02)" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-7">
