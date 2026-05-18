@@ -6,7 +6,7 @@ export const company = {
   nif: "5001292803",
   address: "Bairro Alvalade, Rua Oliveira Martins, Condomínio Solar do Alvalade, R/C, Sala n.º 6, Luanda — Angola",
   phones: ["+244 923 978 800", "+244 990 978 800"],
-  whatsapp: "244923978800",
+  whatsapp: "244990978800",
   emails: {
     geral: "geral@utchileza.ao",
     construcoes: "construcoes@utchileza.ao",
