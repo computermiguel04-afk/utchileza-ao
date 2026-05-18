@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo-utchileza.png";
 
 const links = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#servicos", label: "Serviços" },
-  { href: "#diferenciais", label: "Diferenciais" },
-  { href: "#projectos", label: "Projectos" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/sobre", label: "Sobre" },
+  { href: "/servicos", label: "Serviços" },
+  { href: "/projectos", label: "Projectos" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 export const Navbar = () => {
