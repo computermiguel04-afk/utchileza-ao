@@ -50,6 +50,39 @@ export const CertifiedServices = () => {
           </p>
         </div>
 
+        {/* Destaque: Sector Petrolífero */}
+        <div className="relative mb-20 overflow-hidden rounded-sm border border-accent/30 bg-ink text-ink-foreground shadow-elegant">
+          <div className="absolute inset-0 bg-gradient-to-r from-accent/10 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-gold via-accent to-transparent" />
+          <div className="relative grid md:grid-cols-12 gap-8 p-8 md:p-12 items-center">
+            <div className="md:col-span-2 flex md:justify-center">
+              <div className="p-5 rounded-sm bg-gold/15 border border-gold/30">
+                <Fuel className="w-10 h-10 text-gold" strokeWidth={1.25} />
+              </div>
+            </div>
+            <div className="md:col-span-7">
+              <div className="inline-flex items-center gap-2 mb-4">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold bg-gold/10 border border-gold/30 px-3 py-1">Destaque</span>
+                <span className="text-[10px] uppercase tracking-[0.3em] text-ink-foreground/60">Certif. ANPG · MIREMPET</span>
+              </div>
+              <h3 className="font-display text-3xl md:text-4xl leading-tight text-ink-foreground">
+                Prestação de Serviços no <em className="not-italic text-gold">Sector Petrolífero</em>
+              </h3>
+              <p className="mt-4 text-ink-foreground/70 leading-relaxed max-w-2xl">
+                Fornecimentos e serviços especializados para operadoras e prestadoras da indústria petrolífera angolana, com total conformidade ANPG e MIREMPET.
+              </p>
+            </div>
+            <div className="md:col-span-3 md:text-right">
+              <a
+                href="/#contacto"
+                className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] border border-gold/60 text-gold px-6 py-4 hover:bg-gold hover:text-ink transition-colors"
+              >
+                Solicitar proposta <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div className="space-y-14">
           {certificates.map((cert) => (
             <div key={cert.category}>
