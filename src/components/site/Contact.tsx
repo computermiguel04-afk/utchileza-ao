@@ -70,7 +70,7 @@ export const Contact = () => {
         >
           <div>
             <div className="text-xs uppercase tracking-[0.35em] text-gold mb-3">WhatsApp directo</div>
-            <div className="font-display text-3xl md:text-4xl">+244 923 978 800</div>
+            <div className="font-display text-3xl md:text-4xl">+244 990 978 800</div>
           </div>
           <span className="inline-flex items-center gap-3 bg-gold text-ink px-8 py-4 text-sm uppercase tracking-[0.25em] group-hover:bg-ink-foreground transition-colors">
             Iniciar conversa →
