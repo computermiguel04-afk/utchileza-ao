@@ -1,4 +1,4 @@
-import { Award, ShieldCheck, FileCheck, Droplets, Package, Sparkles, Leaf, Stethoscope, Anchor, HardHat, Building2 } from "lucide-react";
+import { Award, ShieldCheck, FileCheck, Droplets, Package, Sparkles, Leaf, Stethoscope, Anchor, HardHat, Building2, Fuel, ArrowRight } from "lucide-react";
 
 const certificates = [
   {
