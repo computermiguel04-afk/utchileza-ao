@@ -1,4 +1,5 @@
 import { Award, ShieldCheck, FileCheck, Droplets, Package, Sparkles, Leaf, Stethoscope, Anchor, HardHat, Building2, Fuel, ArrowRight } from "lucide-react";
+import petroleoPlataforma from "@/assets/petroleo-plataforma.jpg";
 
 const certificates = [
   {
