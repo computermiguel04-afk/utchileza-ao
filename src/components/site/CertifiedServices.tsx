@@ -1,4 +1,5 @@
 import { Award, ShieldCheck, FileCheck, Droplets, Package, Sparkles, Leaf, Stethoscope, Anchor, HardHat, Building2, Fuel, ArrowRight } from "lucide-react";
+import petroleoPlataforma from "@/assets/petroleo-plataforma.jpg";
 
 const certificates = [
   {
@@ -80,7 +81,60 @@ export const CertifiedServices = () => {
                 Solicitar proposta <ArrowRight className="w-4 h-4" />
               </a>
             </div>
+        </div>
+
+        {/* Plataforma + Descrição de atuação no sector petrolífero */}
+        <div className="mb-24 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          <div className="lg:col-span-6 relative">
+            <div className="relative aspect-[4/3] overflow-hidden shadow-elegant">
+              <img
+                src={petroleoPlataforma}
+                alt="Plataforma petrolífera offshore ao pôr-do-sol"
+                loading="lazy"
+                width={1536}
+                height={1024}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-ink/40 via-transparent to-transparent pointer-events-none" />
+            </div>
+            <div className="absolute -bottom-6 -left-6 hidden md:block bg-gold text-ink px-5 py-3">
+              <div className="text-[10px] uppercase tracking-[0.3em] font-semibold">Offshore · Onshore</div>
+            </div>
           </div>
+
+          <div className="lg:col-span-6">
+            <p className="gold-line text-xs uppercase tracking-[0.35em] text-primary/70 mb-6">Atuação · Oil &amp; Gas</p>
+            <h3 className="font-display text-3xl md:text-5xl text-primary leading-tight text-balance">
+              Parceiros da cadeia <em className="not-italic text-accent">petrolífera</em> angolana.
+            </h3>
+            <div className="mt-6 space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                A Utchileza presta serviços e fornecimentos especializados a operadoras, prestadoras e bases logísticas
+                que servem a indústria petrolífera nacional — em ambientes onshore, plataformas offshore e instalações de apoio.
+              </p>
+              <p>
+                Actuamos com rigor técnico, conformidade regulamentar (ANPG · MIREMPET) e padrões internacionais
+                de HSE, garantindo continuidade operacional aos nossos clientes.
+              </p>
+            </div>
+
+            <ul className="mt-8 grid sm:grid-cols-2 gap-x-6 gap-y-3 text-sm text-foreground/85">
+              {[
+                "Fornecimento de uniformes e EPI's",
+                "Material de navegação marítima",
+                "Serviços de limpeza industrial",
+                "Fornecimento de água e produtos higiénicos",
+                "Material informático e de escritório",
+                "Apoio logístico a bases e plataformas",
+              ].map((s) => (
+                <li key={s} className="flex items-start gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 bg-accent rounded-full shrink-0" />
+                  <span>{s}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
         </div>
 
         <div className="space-y-14">
