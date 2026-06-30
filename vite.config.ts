@@ -11,6 +11,13 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
+    proxy: {
+      "/__l5e/assets-v1": {
+        target: `https://${process.env.LOVABLE_PREVIEW_HOST || "id-preview--88a12a93-8625-4151-a23b-3ea20736cdee.lovable.app"}`,
+        changeOrigin: true,
+        secure: true,
+      },
+    },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
