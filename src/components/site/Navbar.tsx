@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo-utchileza.png";
+import logoAsset from "@/assets/logo-utchileza.png.asset.json";
 
 const links = [
   { href: "/sobre", label: "Sobre" },
