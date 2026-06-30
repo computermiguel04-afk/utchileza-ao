@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="container py-16 grid md:grid-cols-12 gap-10">
         <div className="md:col-span-5">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Utchileza" width={40} height={40} className="h-10 w-10 brightness-0 invert" />
+            <img src={logo} alt="Utchileza" width={40} height={40} className="h-10 w-10 object-contain" />
             <div>
               <div className="font-display text-xl tracking-wide">UTCHILEZA</div>
               <div className="text-[10px] uppercase tracking-[0.2em] text-gold">{company.tagline}</div>
