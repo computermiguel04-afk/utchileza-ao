@@ -16,12 +16,12 @@ export const company = {
 };
 
 export const social = [
-  { name: "Facebook", href: "https://www.facebook.com/utchileza", Icon: Facebook },
-  { name: "Instagram", href: "https://www.instagram.com/utchileza", Icon: Instagram },
+  { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61590315636951", Icon: Facebook },
+  { name: "Instagram", href: "https://www.instagram.com/utchileza/", Icon: Instagram },
   { name: "LinkedIn", href: "https://www.linkedin.com/company/utchileza", Icon: Linkedin },
-  { name: "WhatsApp", href: `https://wa.me/${company.whatsapp}`, Icon: MessageCircle },
-  { name: "Website", href: `https://${company.website}`, Icon: Globe },
-  { name: "Email", href: `mailto:${company.emails.geral}`, Icon: Mail },
+  { name: "WhatsApp", href: "https://wa.me/244923978800", Icon: MessageCircle },
+  { name: "Website", href: "https://www.utchileza.ao", Icon: Globe },
+  { name: "Email", href: "mailto:geral@utchileza.ao", Icon: Mail },
 ];
 
 export const phoneLinks = company.phones.map((p) => ({
