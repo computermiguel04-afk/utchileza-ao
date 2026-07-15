@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoAsset from "@/assets/logo-utchileza.png.asset.json";
+import logoUrl from "@/assets/logo-utchileza.png";
 
 const links = [
   { href: "/sobre", label: "Sobre" },
@@ -29,7 +29,7 @@ export const Navbar = () => {
     >
       <div className="container flex items-center justify-between h-20">
         <Link to="/" className="flex items-center gap-3 group">
-          <img src={logoAsset.url} alt="Utchileza" width={40} height={40} className="h-10 w-10 object-contain" />
+          <img src={logoUrl} alt="Utchileza" width={40} height={40} className="h-10 w-10 object-contain" />
           <div className="leading-tight">
             <div className="font-display text-xl tracking-wide text-ink-foreground">UTCHILEZA</div>
             <div className="text-[10px] uppercase tracking-[0.2em] text-gold">Engenharia · Construção</div>
