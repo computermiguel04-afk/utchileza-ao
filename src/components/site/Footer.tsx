@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/logo-utchileza.png.asset.json";
+import logoUrl from "@/assets/logo-utchileza.png";
 import { company, social } from "@/lib/company";
 
 export const Footer = () => {
