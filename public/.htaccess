@@ -1,0 +1,64 @@
+# Utchileza — cPanel / Apache config
+# Colocar o conteúdo de dist/ em public_html/
+
+Options -MultiViews
+DirectoryIndex index.html
+
+# Forçar HTTPS (opcional — activo por defeito)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # SPA fallback: qualquer rota que não seja ficheiro/pasta real → index.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# MIME types (evita erros de módulo JS/CSS em alguns servidores cPanel)
+<IfModule mod_mime.c>
+  AddType application/javascript            .js .mjs
+  AddType text/css                          .css
+  AddType image/svg+xml                     .svg
+  AddType image/webp                        .webp
+  AddType application/font-woff2            .woff2
+  AddType application/manifest+json         .webmanifest
+</IfModule>
+
+# Compressão
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# Cache dos assets versionados
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css                 "access plus 1 year"
+  ExpiresByType application/javascript   "access plus 1 year"
+  ExpiresByType image/jpeg               "access plus 6 months"
+  ExpiresByType image/png                "access plus 6 months"
+  ExpiresByType image/webp               "access plus 6 months"
+  ExpiresByType image/svg+xml            "access plus 6 months"
+  ExpiresByType application/font-woff2   "access plus 1 year"
+  ExpiresDefault                         "access plus 1 week"
+</IfModule>
+
+# O index.html nunca deve ficar em cache (permite deploys imediatos)
+<IfModule mod_headers.c>
+  <FilesMatch "index\.html$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+</IfModule>
+
+# Segurança básica
+<Files ".env">
+  Require all denied
+</Files>
+<Files ".git*">
+  Require all denied
+</Files>
